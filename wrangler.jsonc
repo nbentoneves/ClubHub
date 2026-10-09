@@ -1,23 +1,27 @@
 {
-  "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "clubhub",
-  "main": "src/worker/index.ts",
-  "compatibility_date": "2026-10-09",
-  "compatibility_flags": ["nodejs_compat"],
-  "assets": {
-    "directory": "./dist/client",
-    "not_found_handling": "single-page-application",
-    "run_worker_first": ["/api/*"]
-  },
-  "d1_databases": [
-    {
-      "binding": "DB",
-      "database_name": "clubhub",
-      "database_id": "536c5253-ba35-4d45-b714-167bfba2658e",
-      "migrations_dir": "migrations"
-    }
-  ],
-  "vars": {
-    "APP_NAME": "ClubHub"
-  }
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "clubhub",
+	"main": "src/worker/index.ts",
+	"compatibility_date": "2026-10-09",
+	"compatibility_flags": [
+		"nodejs_compat"
+	],
+	"assets": {
+		"directory": "./dist/client",
+		"not_found_handling": "single-page-application",
+		"run_worker_first": [
+			"/api/*"
+		]
+	},
+	"d1_databases": [
+		{
+			"binding": "clubhub",
+			"database_name": "clubhub",
+			"database_id": "536c5253-ba35-4d45-b714-167bfba2658e",
+			"migrations_dir": "migrations"
+		}
+	],
+	"vars": {
+		"APP_NAME": "ClubHub"
+	}
 }
