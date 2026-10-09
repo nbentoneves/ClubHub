@@ -13,7 +13,7 @@
     {
       "binding": "DB",
       "database_name": "clubhub",
-      "database_id": "00000000-0000-0000-0000-000000000000",
+      "database_id": "536c5253-ba35-4d45-b714-167bfba2658e",
       "migrations_dir": "migrations"
     }
   ],
