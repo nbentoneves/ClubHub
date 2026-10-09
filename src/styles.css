@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+
+:root {
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: #252a29;
+  background: #f4f6f5;
+  font-synthesis: none;
+  letter-spacing: 0;
+  --border: #d6dcd8;
+  --accent: #126952;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 280px; }
+button { font: inherit; }
+.workspace { max-width: 960px; margin: 0 auto; padding: 0 24px 48px; }
+.workspace-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 88px;
+  border-bottom: 1px solid var(--border);
+}
+.wordmark { font-size: 22px; font-weight: 600; }
+.environment { font-size: 14px; color: #606965; }
+.connection { max-width: 480px; padding-top: 40px; }
+h1 { margin: 0 0 24px; font-size: 24px; font-weight: 500; }
+.connection-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  min-height: 64px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.status { display: flex; align-items: center; gap: 8px; font-size: 14px; }
+.status-dot { width: 8px; height: 8px; flex-shrink: 0; border-radius: 50%; background: #7a817e; }
+.status-connected .status-dot { background: var(--accent); }
+.status-error .status-dot { background: #b53838; }
+[role='alert'] { color: #a12d2d; }
+button {
+  min-height: 40px;
+  margin-top: 24px;
+  padding: 8px 16px;
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  color: white;
+  background: var(--accent);
+  cursor: pointer;
+}
+button:hover:not(:disabled) { background: #0c503e; }
+button:disabled { opacity: 0.55; cursor: wait; }
+button:focus-visible { outline: 3px solid #ce8b19; outline-offset: 3px; }
+@media (max-width: 480px) {
+  .workspace { padding-inline: 16px; }
+  .connection { padding-top: 28px; }
+}
